@@ -1,0 +1,36 @@
+<ion-content [fullscreen]="true">
+  <div class="header">
+    <ion-icon id="icone" name="caret-back-outline" (click) = "retornarpagina()"></ion-icon>
+    <img id="logo" src="assets/imagens/logo_1.png" alt="logo image">
+  </div>
+  <div id="container_1">
+    <section class="section_1">
+      <h1 id="titulo">CADASTRAR<br>EMPRESA</h1>
+      <form action="">
+        <input class="inputs" placeholder="  NOME DO RESPONSÁVEL">
+        <input class="inputs" placeholder="  CNPJ">
+        <input class="inputs" placeholder="  E-MAIL DA EMPRESA">
+      </form>
+    </section>
+    <section class="section_1" >
+      <h1 id="titulo">ENDEREÇO DA<br>EMPRESA</h1>
+      <form action="">
+        <input class="inputs" placeholder="  CIDADE">
+        <input class="inputs" placeholder="  ENDEREÇO FÍSICO">
+        <input class="inputs" placeholder="  BAIRRO">
+        <div id="sub_container">
+          <input class="inputs" placeholder="  CEP">
+          <input class="inputs" placeholder="  N°">
+        </div>
+      </form>
+    </section>
+    <section class="section_1">
+      <h1 id="titulo">DEFINIR<br>SENHA</h1>
+      <form action="">
+        <input class="inputs" placeholder="  SENHA">
+        <input class="inputs" placeholder="  CONFIRMAR SENHA">
+      </form>
+    </section>
+    <button id="button_cadastro"><b>CADASTRAR</b></button>
+  </div>
+</ion-content>

@@ -1,0 +1,86 @@
+.a {
+    --max-width: 80%;
+}
+
+.header {
+    --background: #3A3A6C;
+    color: white;
+}
+
+.container_menu {
+    --background: linear-gradient(to bottom, #2c2c54, #6868bc);
+}
+
+.top {
+    margin-top: 20px;
+}
+
+.subcontainer_menu {
+    margin-top: 15px;
+    color: #FFFFFF;
+}
+
+ion-menu-button {
+    color: white;
+}
+
+#logo {
+    width: 57%;
+    height: 20%;
+    align-items: center;
+}
+
+#header {
+    --background: #3A3A6C;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    margin-right: 25%;
+}
+
+.hr {
+    background-color: white;
+    height: 2px;
+}
+
+#titulo {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.icone,
+.icone1 {
+    width: 44px;
+    height: 44px;
+    margin-right: 16px;
+}
+
+#container_1 {
+    display: flex;
+    margin-top: 22px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.subcontainer {
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    width: 250px;
+    border-radius: 15px;
+    margin-bottom: 18px;
+    background-color: #ACC8FF;
+    align-items: center;
+}
+
+#footer {
+    width: 100%;
+    height: 41px;
+    background: #6464BB;
+    position: fixed; /* Para garantir que o footer esteja sempre visível no fundo da página */
+    bottom: 0;
+    left: 0;
+  }
+  

@@ -1,0 +1,101 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+
+#container {
+  text-align: center;
+  
+ 
+  
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+ion-content {
+  --background: linear-gradient(to bottom, #2c2c54, #6868bc);
+}
+
+#logo{
+  height: 60px;
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+.inputs{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  color:#FFFFFF;
+  font-size: 13px;
+  --background: transparent;
+}
+
+.inputs:hover{
+  --background:#7171D2;
+    color: #FFFFFF;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+ 
+  border-radius: 8px;
+}
+
+.input-container ion-icon {
+  margin-top: 10px;
+  color: #FFFFFF;
+}
+
+#subcontainer {
+  display: flex;
+  font-size: 12px;
+  align-items: center;
+  justify-content: flex-start;
+  color: #FFFFFF;
+  margin-left: 11%; /* Ajuste a margem conforme necessário */
+  margin-top: 15px; /* Ajuste a margem conforme necessário */
+  margin-bottom: 34px;
+}
+
+#subcontainer input {
+  margin-right: 5px; /* Espaço entre o checkbox e o label */
+ 
+}
+
+#container2{
+  margin: 10% 10% 2% 10%;
+}
+
+.botoes{
+  width: 262px;
+  height: 34px;
+    border-radius: 50px;
+  margin-bottom: 19px;
+}
+
+
+
+#textofinal{
+  color: #FFFEFE !important;
+}

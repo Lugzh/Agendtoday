@@ -1,0 +1,7 @@
+{
+  "name": "AgendToday",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

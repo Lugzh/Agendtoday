@@ -1,0 +1,31 @@
+<ion-content [fullscreen]="true">
+ 
+  <div id="container">
+    <img id="logo"
+    src="assets/imagens/logo.png"
+    >
+    <div id="container2">
+      
+      <div class="input-container">
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-input class="inputs" label="NOME FANTASIA" label-placement="floating" fill="solid" placeholder="Roger Axademik"></ion-input>
+      </div>
+
+      <div class="input-container">
+        <ion-icon name="lock-closed-outline"></ion-icon>
+        <ion-input class="inputs" label="SENHA" label-placement="floating" fill="solid" placeholder="eunaonaci"></ion-input>
+      </div>
+
+    </div>
+    <div id="subcontainer"> 
+      <input type="checkbox" name="" id="">
+      <label for="">LEMBRAR</label>
+      
+    </div>
+    <button class="botoes" (click) = "irparadashboard()"><b>LOGIN</b></button>
+    <button class="botoes" (click) = "irparacadastro()"><b>CADASTRAR-SE</b></button>
+    <div class="texto">
+      <p id="textofinal">Esqueceu a senha?</p>
+    </div>
+  </div>
+</ion-content>
