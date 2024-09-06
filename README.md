@@ -64,4 +64,4 @@ AgendToday é um sistema de agendamento de serviços projetado para pequenos neg
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/agendtoday.git
+   git clone https://github.com/lugzh/agendtoday.git
