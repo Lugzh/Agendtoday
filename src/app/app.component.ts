@@ -28,4 +28,13 @@ export class AppComponent {
   irparadashboard(){
     this.nav.navigateForward("dashboard")
   }
+  irparaagenda(){
+    this.nav.navigateForward("agenda")
+  }
+  irparahorarios(){
+    this.nav.navigateForward("horarios")
+  }
+  sair(){
+    this.nav.navigateForward("home")
+  }
 }

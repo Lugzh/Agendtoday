@@ -1,36 +1,40 @@
 <ion-content [fullscreen]="true">
   <div class="header">
-    <ion-icon id="icone" name="caret-back-outline" (click) = "retornarpagina()"></ion-icon>
+    <ion-icon id="icone" name="caret-back-outline" (click)="retornarpagina()"></ion-icon>
     <img id="logo" src="assets/imagens/logo_1.png" alt="logo image">
   </div>
   <div id="container_1">
     <section class="section_1">
       <h1 id="titulo">CADASTRAR<br>EMPRESA</h1>
-      <form action="">
-        <input class="inputs" placeholder="  NOME DO RESPONSÁVEL">
-        <input class="inputs" placeholder="  CNPJ">
-        <input class="inputs" placeholder="  E-MAIL DA EMPRESA">
+      <form [formGroup]="cadastroForm" (ngSubmit)="onCadastro()">
+        <ion-input class="inputs" placeholder="NOME DO RESPONSÁVEL" formControlName="nomeResponsavel"></ion-input>
+        <ion-input class="inputs" placeholder="CNPJ" formControlName="cnpj"></ion-input>
+        <ion-input class="inputs" placeholder="E-MAIL DA EMPRESA" formControlName="email"></ion-input>
       </form>
     </section>
-    <section class="section_1" >
+
+    <section class="section_1">
       <h1 id="titulo">ENDEREÇO DA<br>EMPRESA</h1>
-      <form action="">
-        <input class="inputs" placeholder="  CIDADE">
-        <input class="inputs" placeholder="  ENDEREÇO FÍSICO">
-        <input class="inputs" placeholder="  BAIRRO">
+      <form [formGroup]="cadastroForm">
         <div id="sub_container">
-          <input class="inputs" placeholder="  CEP">
-          <input class="inputs" placeholder="  N°">
+          <ion-input class="inputs" placeholder="CEP" formControlName="cep" (ionBlur)="buscarEnderecoPorCep()"></ion-input>
+          <ion-input class="inputs" placeholder="N°" formControlName="numero"></ion-input>
         </div>
+        <ion-input class="inputs" placeholder="CIDADE" formControlName="cidade"></ion-input>
+        <ion-input class="inputs" placeholder="ENDEREÇO FÍSICO" formControlName="enderecoFisico"></ion-input>
+        <ion-input class="inputs" placeholder="BAIRRO" formControlName="bairro"></ion-input>
+        
       </form>
     </section>
+
     <section class="section_1">
       <h1 id="titulo">DEFINIR<br>SENHA</h1>
-      <form action="">
-        <input class="inputs" placeholder="  SENHA">
-        <input class="inputs" placeholder="  CONFIRMAR SENHA">
+      <form [formGroup]="cadastroForm">
+        <ion-input class="inputs" placeholder="1 maiúscula, 1 minúscula, 1 num." type="password" formControlName="senha"></ion-input>
+        <ion-input class="inputs" placeholder="CONFIRMAR SENHA" type="password" formControlName="confirmarSenha"></ion-input>
       </form>
     </section>
-    <button id="button_cadastro"><b>CADASTRAR</b></button>
+
+    <button id="button_cadastro" type="submit" [disabled]="cadastroForm.invalid" (click)="onCadastro()"><b>CADASTRAR</b></button>
   </div>
 </ion-content>

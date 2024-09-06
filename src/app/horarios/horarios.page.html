@@ -1,0 +1,75 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>horários</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+
+  </ion-header>
+  <ion-content>
+    <div class="container">
+      <div class="section">
+        <h3>Horários:</h3>
+        <div class="buttons-group">
+          <ion-button  class="time-button" fill="solid" *ngFor="let button of timeButtons; let i = index" (click)="presentAlert(button)" >{{button}}</ion-button>
+        </div>
+
+        <div class="editar">
+          <ion-icon id="timmaia" name="add-circle" style="font-size: 60px; color: #636364;" (click)="setOpen(true)"></ion-icon>
+         <!-- <ion-icon name="remove-circle" style="font-size: 60px; color: #636364;"></ion-icon> -->
+
+          <ion-modal [isOpen]="isModalOpen">
+            <ng-template>
+              <ion-header>
+                <ion-toolbar>
+                  <ion-buttons slot="start">
+                    <ion-button (click)="setOpen(false)">Cancelar</ion-button>
+                  </ion-buttons>
+                  <ion-buttons slot="end">
+                    <ion-button (click)="setOpen(false)"(click)="addTimeButton()">Salvar</ion-button>
+                  </ion-buttons>
+                </ion-toolbar>
+              </ion-header>
+              <ion-content class="ion-padding">
+                <ion-datetime [(ngModel)]="horarioAtual" presentation="time"></ion-datetime>
+              </ion-content>             
+            </ng-template>            
+          </ion-modal>
+        </div>
+      </div>
+      <p>* Selecione um horário para excluir</p>
+
+      <div class="section">
+        <h3>Dias:</h3>
+        <div class="buttons-group">
+          <ion-button
+          class="day-button"
+          *ngFor="let dia of diasDaSemana; let i = index"
+          [ngClass]="{'activated': dia.desativado}"
+          (click)="alternarDia(i)">
+          {{ dia.nome }}
+        </ion-button>
+        </div>
+      </div>
+      
+
+
+
+
+      <div class="buttons-group">
+        <ion-button id="cancelar" expand="block" fill="solid">Cancelar</ion-button>
+        <ion-button id="salvar" expand="block" fill="solid" (click)="onHoras()">Salvar</ion-button>
+        
+        <ion-alert
+        trigger="salvar"
+        header="Horários salvos com sucesso!"
+        [buttons]="alertButtons"
+      ></ion-alert>
+      
+      </div>
+    </div>
+  </ion-content>
+  
+</ion-content>

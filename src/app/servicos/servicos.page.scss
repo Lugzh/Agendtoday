@@ -1,0 +1,58 @@
+    #titulo{
+        margin-top: 20px;
+        color: black;
+        font-weight: 500;
+        font-style: bold;
+    }
+    hr{
+        height: 1px;
+        background-color: #ffffff; /* Define a cor de fundo da linha como branco */
+        border: none; /* Remove a borda padrão */
+    }
+    
+    #card{
+        background-color:#3A3A6C;
+        padding: 16px;
+        border-radius: 5%;
+        color: #ffffff;
+    }
+    .service-card {
+      background-color: #2e2e78; /* Fundo da caixa */
+      border-radius: 10px; /* Bordas arredondadas */
+      padding: 16px;
+      color: #ffffff; /* Cor do texto */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    }
+  
+    .service-header {
+      font-weight: bold;
+      font-size: 1.2rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Linha de separação */
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+  
+    .service-item {
+      margin: 8px 0;
+      font-size: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .service-item::after {
+      content: '\25BC'; /* Seta para baixo */
+      font-size: 0.8rem;
+      margin-left: 8px;
+    }
+  
+    .service-item[ng-reflect-is-category="true"]::after {
+      content: '';
+    }
+  
+    .fab-button {
+      --background: #3b55fa;
+      --color: #ffffff;
+    }
+
+  

@@ -18,3 +18,7 @@ import { ServicosPage } from './servicos.page';
   declarations: [ServicosPage]
 })
 export class ServicosPageModule {}
+export interface Servico {
+  nome: string;
+  tempo: string;
+}

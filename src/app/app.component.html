@@ -16,12 +16,20 @@
           <h2>Empresa</h2>
           <div class="hr"></div>
         </section>
-        <section class="subcontainer_menu">
+        <section class="subcontainer_menu" (click)="irparaagenda()">
           <h2>Agenda</h2>
           <div class="hr"></div>
         </section>
         <section class="subcontainer_menu" (click)="irparadashboard()">
           <h2>Dashboard</h2>
+          <div class="hr"></div>
+        </section>
+        <section class="subcontainer_menu" (click)="irparahorarios()">
+          <h2>Horários</h2>
+          <div class="hr"></div>
+        </section>
+        <section class="subcontainer_menu container_end" (click)="sair()">
+          <h2>Sair</h2>
           <div class="hr"></div>
         </section>
       </ion-content>
@@ -34,7 +42,7 @@
           <ion-buttons slot="start">
             <ion-menu-button></ion-menu-button>
           </ion-buttons>
-          <div id="container">
+          <div id="container" (click)="irparadashboard()">
             <img id="logo" src="assets/imagens/logo_1.png" alt="logo image">
           </div>
         </ion-toolbar>

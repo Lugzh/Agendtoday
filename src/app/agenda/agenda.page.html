@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>agenda</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-title id="titulo">Agenda</ion-title>
+    <div class="date-picker ">
+        <ion-datetime presentation="date" [preferWheel]="true" class="custom-datetime" min="2024-01-01" 
+        max="2030-12-31">></ion-datetime>
+        
+    </div>
+
+    <div class="schedule">
+      
+      <div class="appointment"><ion-button class="time-slot" fill="solid" color="primary">09:00</ion-button><p>Limpeza de pele profunda (cariani)</p></div>
+      <div class="appointment"><ion-button class="time-slot" fill="solid" color="primary">09:00</ion-button><p>Limpeza de pele profunda (cariani)</p></div>
+      <div class="appointment"><ion-button class="time-slot" fill="solid" color="primary">09:00</ion-button><p>Limpeza de pele profunda (cariani)</p></div>
+      <div class="appointment"><ion-button class="time-slot" fill="solid" color="primary">09:00</ion-button><p>Limpeza de pele profunda (cariani)</p></div>
+    </div>
+
+</ion-content>

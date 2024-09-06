@@ -1,31 +1,54 @@
 <ion-content [fullscreen]="true">
- 
-  <div id="container">
-    <img id="logo"
-    src="assets/imagens/logo.png"
-    >
-    <div id="container2">
-      
-      <div class="input-container">
-        <ion-icon name="person-outline"></ion-icon>
-        <ion-input class="inputs" label="NOME FANTASIA" label-placement="floating" fill="solid" placeholder="Roger Axademik"></ion-input>
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+    <div id="container">
+      <img id="logo" src="assets/imagens/logo.png">
+
+      <div id="container2">
+        <div class="input-container">
+          <ion-icon name="person-outline"></ion-icon>
+          <ion-input
+            class="inputs"
+            label="CNPJ"
+            label-placement="floating"
+            fill="solid"
+            placeholder="Roger Axademik"
+            formControlName="cnpj">
+          </ion-input>
+        </div>
+
+        <div class="input-container">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <ion-input
+            class="inputs"
+            label="SENHA"
+            label-placement="floating"
+            fill="solid"
+            placeholder="eunaonaci"
+            type="password"
+            formControlName="password">
+          </ion-input>
+        </div>
+
+        <!-- Mensagem de erro para senha -->
+        <ion-text color="danger" *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched">
+          A senha deve ter pelo menos 8 caracteres, incluindo números, letras maiúsculas e minúsculas.
+        </ion-text>
+        <ion-text color="danger" *ngIf="loginError">
+          CNPJ ou Senha inválidos
+        </ion-text>
       </div>
 
-      <div class="input-container">
-        <ion-icon name="lock-closed-outline"></ion-icon>
-        <ion-input class="inputs" label="SENHA" label-placement="floating" fill="solid" placeholder="eunaonaci"></ion-input>
+      <div id="subcontainer">
+        <input type="checkbox" name="" id="">
+        <label for="">LEMBRAR</label>
       </div>
 
+      <button class="botoes" type="submit" [disabled]="loginForm.invalid" (click)="onLogin()"><b>LOGIN</b></button>
+      <button class="botoes" type="button" (click)="irparacadastro()"><b>CADASTRAR-SE</b></button>
+
+      <div class="texto">
+        <p id="textofinal">Esqueceu a senha?</p>
+      </div>
     </div>
-    <div id="subcontainer"> 
-      <input type="checkbox" name="" id="">
-      <label for="">LEMBRAR</label>
-      
-    </div>
-    <button class="botoes" (click) = "irparadashboard()"><b>LOGIN</b></button>
-    <button class="botoes" (click) = "irparacadastro()"><b>CADASTRAR-SE</b></button>
-    <div class="texto">
-      <p id="textofinal">Esqueceu a senha?</p>
-    </div>
-  </div>
+  </form>
 </ion-content>

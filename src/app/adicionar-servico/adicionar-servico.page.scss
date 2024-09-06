@@ -1,0 +1,97 @@
+ion-content {
+  --background: #ffffff;
+  padding: 10px;
+}
+
+.titulo {
+  margin-top: 20px;
+  font-size: 26px;
+}
+
+.service-card {
+  margin-top: 20px;
+  background-color: #2e2e78; /* Fundo da caixa */
+  border-radius: 10px; /* Bordas arredondadas */
+  padding: 16px 1px 16px 10px;
+  color: #ffffff; /* Cor do texto */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  margin-bottom: 20px; /* Espaçamento entre cartões */
+}
+
+.itens {
+  display: flex;
+  flex-direction: row;
+  --background: transparent;
+  --border-color: transparent;
+  --highlight-height: 0;
+  --inner-padding-end: 7px;
+  --color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.label {
+  color: #ffffff;
+  margin-right: 10px;
+}
+
+.input {
+  --background: #ffffff;
+  color: black;
+  min-width: none;
+  width: 100%; /* Ajustado para 100% para funcionar melhor com padding */
+  min-height: 30px;
+  padding: 15px 20px; /* Adiciona padding dentro do input */
+  --border-radius: 10px;
+  font-size: 16px; /* Ajusta o tamanho da fonte */
+  box-sizing: border-box; /* Inclui o padding na largura total */
+  border: none; /* Remove borda padrão */
+}
+
+.input::placeholder {
+  color: #6e6e6e; /* Cor do placeholder */
+  opacity: 1; /* Garante que o placeholder tenha a opacidade desejada */
+  font-size: 16px; /* Ajusta o tamanho da fonte */
+}
+
+.select {
+  --background: #ffffff;
+  --color: #000000;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+ion-button {
+  --border-radius: 20px;
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+}
+
+ion-button[color="primary"] {
+  --background: #3b55fa;
+  --color: #ffffff;
+}
+
+ion-button[color="secondary"] {
+  --background: #4CAF50;
+  --color: #ffffff;
+  margin-right: 10px;
+}
+
+ion-button[color="danger"] {
+  --background: #f44336;
+  --color: #ffffff;
+  margin-right: 10px;
+
+}
+
+.final {
+  margin-bottom: 70px;
+}

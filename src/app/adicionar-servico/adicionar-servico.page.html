@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Adicionar_servico</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-title class="titulo"><strong>Cadastrar <br> Serviço</strong></ion-title>
+
+    <div class="service-card">
+      <ion-item class="itens">
+        <ion-label class="label" >Serviço:</ion-label>
+        <ion-input class="input" placeholder="Insira o serviço efetuado"[(ngModel)]="nome_servico"></ion-input>
+      </ion-item>
+  
+      <ion-item class="itens">
+        <ion-label class="label">Tempo:</ion-label>
+        <ion-input class="input" placeholder="Insira o tempo necessário"[(ngModel)]="tempo"></ion-input>
+      </ion-item>
+  
+      <ion-item class="itens">
+        <ion-label  class="label">Profissional:</ion-label>
+        <ion-select value="Rosana">
+          <ion-select-option>Rosana</ion-select-option>
+          <!-- Adicione mais opções aqui -->
+        </ion-select>
+      </ion-item>
+  
+      <div class="buttons">
+        <ion-button color="primary">Cancelar</ion-button>
+        <ion-button color="secondary" (click)="onClick()">Salvar</ion-button>
+      </div>
+    </div>
+  
+
+    <ion-title class="titulo"><strong>Remover <br> Serviço</strong></ion-title>
+    <div class="service-card final">
+
+      <ion-item class="itens">
+        <ion-label class="label">Serviço:</ion-label>
+        <ion-input class="input" placeholder="Insira o nome do serviço" [(ngModel)]="remover_nome"></ion-input>
+      </ion-item>
+  
+      <div class="buttons ">
+        <ion-button color="primary">Cancelar</ion-button>
+        <ion-button color="danger" (click)="remover()" >Remover</ion-button>
+      </div>
+    </div>
+  
+  
+</ion-content>

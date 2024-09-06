@@ -22,4 +22,12 @@ export class DashboardPage implements OnInit {
     this.nav.navigateForward("empresa")
     
   }
+  irparaagenda(){
+    this.nav.navigateForward("agenda")
+    
+  }
+  irparahorarios(){
+    this.nav.navigateForward("horarios")
+    
+  }
 }

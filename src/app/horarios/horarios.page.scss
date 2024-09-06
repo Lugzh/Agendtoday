@@ -1,0 +1,49 @@
+.container {
+  padding: 16px;
+}
+.activated {
+  color:white;
+  --background: #636364;
+  --background-hover: #636364;
+  --background-activated: #636364;
+  --background-focused: #636364;
+}
+.section {
+  margin-bottom: 20px;
+}
+
+.editar{
+  display: flex;
+  justify-content: center;
+}
+
+.time-button, .day-button {
+  width: calc(30%);
+  color:white;
+}
+
+
+.buttons-group ion-button {
+  --border-radius: 12px;
+
+}
+
+ion-button {
+  --padding-start: 10px;
+  --padding-end: 10px;
+}
+
+h3 {
+  margin-bottom: 8px;
+}
+#salvar{
+  margin-bottom: 60px;
+  color:white;
+}
+#cancelar{
+  color:white;
+  --background: #f04747;
+  --background-hover: #636364;
+  --background-activated: #636364;
+  --background-focused: #636364;
+}

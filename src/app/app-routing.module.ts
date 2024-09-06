@@ -27,6 +27,18 @@ const routes: Routes = [
     path: 'empresa',
     loadChildren: () => import('./empresa/empresa.module').then( m => m.EmpresaPageModule)
   },
+  {
+    path: 'adicionar-servico',
+    loadChildren: () => import('./adicionar-servico/adicionar-servico.module').then( m => m.AdicionarServicoPageModule)
+  },
+  {
+    path: 'agenda',
+    loadChildren: () => import('./agenda/agenda.module').then( m => m.AgendaPageModule)
+  },
+  {
+    path: 'horarios',
+    loadChildren: () => import('./horarios/horarios.module').then( m => m.HorariosPageModule)
+  },
 ];
 
 @NgModule({

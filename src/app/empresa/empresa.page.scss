@@ -1,0 +1,59 @@
+
+#profilepicture{
+    width: 9em;
+    width: 100px;  /* Defina uma largura fixa */
+    height: 100px; /* Defina uma altura fixa */
+    border-radius: 50%; /* Torna a imagem circular */
+    object-fit: cover; /* Garante que a imagem se ajuste ao container sem distorção */  
+}
+#membro_img{
+    width: 9em;
+    width: 100px;  /* Defina uma largura fixa */
+    height: 100px; /* Defina uma altura fixa */
+    border-radius: 50%; /* Torna a imagem circular */
+    object-fit: cover; /* Garante que a imagem se ajuste ao container sem distorção */  
+}
+ion-button {
+    width: 100%; /* Faz os botões ocuparem toda a largura disponível */
+  }
+  
+  .btn-red {
+    --background: #ff4c4c;
+  }
+  
+  .btn-blue {
+    --background: #4c8cff;
+  }
+  
+  .btn-green {
+    --background: #4cff4c;
+  }
+  
+  .btn-yellow {
+    --background: #ffea4c;
+  }
+  
+  .btn-purple {
+    --background: #8c4cff;
+  }
+  
+  .btn-orange {
+    --background: #ff9c4c;
+  }
+  
+  .btn-pink {
+    --background: #ff4c9c;
+  }
+  
+  .btn-teal {
+    --background: #4cffc4;
+  }
+  
+  .btn-gray {
+    --background: #9c9c9c;
+  }
+  
+  .btn-brown {
+    --background: #9c6c4c;
+  }
+  
