@@ -65,3 +65,73 @@ AgendToday é um sistema de agendamento de serviços projetado para pequenos neg
 1. Clone este repositório:
    ```bash
    git clone https://github.com/lugzh/agendtoday.git
+
+
+# AgendToday
+
+AgendToday is a service scheduling system designed for small businesses. It facilitates schedule management, business scaling, payments, and client communication.
+
+## 📋 Main Features
+
+- **Schedule Management**: Service scheduling system with optimized time management logic.
+- **Payments**: Supports Pix and QR Code payments.
+- **Sales and Purchase History**: Detailed control of sales and customer purchases.
+- **Reviews**: Customers can rate the services provided.
+- **Location**: Automatic check-in using geolocation and integration with Waze and interactive maps.
+- **Customization**: Customize the webpage with logos, descriptions, images, and text.
+- **Notifications**: Automatic reminders for both customers and service providers.
+- **Accessibility**: Responsive, lightweight, and easy-to-use interface.
+
+## 🌟 Unique Features
+
+- **Real-Time Location Feedback**: Users can share feedback on the location and service conditions after the appointment.
+- **Chatbot Integration**: Simplifies communication and support for customers.
+- **Reward System**: Users earn discount coupons for certain actions such as bookings, leaving reviews, and sharing on social media.
+
+## 🚀 Available Platforms
+
+- **App**: Focused on usability for business management.
+- **Web**: Detailed interface for customers.
+
+## 🎯 Target Audience
+
+- Personal trainers, barbers, lawyers, automotive and human beauty specialists, mechanics, teachers, artists, doctors, dentists, and pet grooming services.
+
+## 🖥️ App Screens
+
+### Mobile:
+
+- **Login Screen**: Log in or sign up.
+- **Sign Up Screen**: Detailed registration with auto-complete address functionality.
+- **Home Screen**: Navigation to the app’s main features.
+- **Services Screen**: Display and allow registration of new services.
+- **Professional’s Schedule Screen**: Displays all scheduled services in a calendar.
+
+### Web:
+
+- **Services Screen**: Lists available services with details of professionals and available times.
+- **Booking**: Automatically suggests time slots based on service duration.
+- **Service Summary**: Displays service details and a map of the business location.
+- **Notifications**: Option for automatic reminders via WhatsApp.
+
+## 💻 Technologies Used
+
+- **Ionic Framework**
+- **Angular**
+- **Firebase Firestore**
+- **MySQL**
+
+## 📦 Installation
+
+### Prerequisites:
+
+- Node.js (>= 14.x.x)
+- Ionic CLI
+- Firebase CLI (optional for integrations)
+
+### Steps:
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/lugzh/agendtoday.git
+
