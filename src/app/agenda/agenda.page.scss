@@ -1,3 +1,4 @@
+
 .date-picker {
   display: flex;
   align-items: center;
@@ -45,7 +46,6 @@
   }
   
   .schedule {
-    padding: 20px;
     display: flex;
     flex-direction: column;
   }
@@ -57,5 +57,22 @@
     height: 30px;
     margin: 20px 0px 10px 0px;
     --border-radius: 12px;
+  }
+  
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .detail-item strong {
+    color: #333;
   }
   

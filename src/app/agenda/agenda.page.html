@@ -7,17 +7,57 @@
 <ion-content [fullscreen]="true">
   <ion-title id="titulo">Agenda</ion-title>
     <div class="date-picker ">
-        <ion-datetime presentation="date" [preferWheel]="true" class="custom-datetime" min="2024-01-01" 
+        <ion-datetime [(ngModel)]="diaAtual" presentation="date" [preferWheel]="true" class="custom-datetime" min="2024-01-01" 
         max="2030-12-31">></ion-datetime>
-        
     </div>
-
-    <div class="schedule">
-      
-      <div class="appointment"><ion-button class="time-slot" fill="solid" color="primary">09:00</ion-button><p>Limpeza de pele profunda (cariani)</p></div>
-      <div class="appointment"><ion-button class="time-slot" fill="solid" color="primary">09:00</ion-button><p>Limpeza de pele profunda (cariani)</p></div>
-      <div class="appointment"><ion-button class="time-slot" fill="solid" color="primary">09:00</ion-button><p>Limpeza de pele profunda (cariani)</p></div>
-      <div class="appointment"><ion-button class="time-slot" fill="solid" color="primary">09:00</ion-button><p>Limpeza de pele profunda (cariani)</p></div>
+    <div style="display:flex;justify-content: center; ">
+    <ion-button (click)="filtrardata()">Filtrar Data <ion-icon name="funnel-outline"></ion-icon></ion-button>
+  </div>
+    <div *ngFor="let agendamento of agendamentosEscolhidos; let i = index"  class="schedule"  (click)="setOpen(true, agendamento)">
+      <div class="appointment">
+        <ion-button class="time-slot" fill="solid" color="primary" >{{agendamento.horario}}</ion-button>
+        <p>{{agendamento.servico}} ({{agendamento.profissional}})</p>
+  
+      </div>
     </div>
+    <ion-modal [isOpen]="isModalOpen">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-buttons slot="start">
+              <ion-button (click)="setOpen(false)">Fechar</ion-button>
+            </ion-buttons>
+            <ion-buttons slot="end">
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
 
+        <ion-content class="ion-padding">
+          <ion-content class="ion-padding">
+            <div class="modal-content">
+              <h2>Detalhes do Agendamento</h2>
+              <div class="detail-item">
+                <strong>Data:</strong> <span>{{selectedAgendamento?.data}}</span>
+              </div>
+              <div class="detail-item">
+                <strong>Horário:</strong> <span>{{selectedAgendamento?.horario}}</span>
+              </div>
+              <div class="detail-item">
+                <strong>Serviço:</strong> <span>{{selectedAgendamento?.servico}}</span>
+              </div>
+              <div class="detail-item">
+                <strong>Profissional:</strong> <span>{{selectedAgendamento?.profissional}}</span>
+              </div>
+              <div class="detail-item">
+                <strong>Telefone:</strong> <span>{{selectedAgendamento?.telefone}}</span>
+              </div>
+              <div class="detail-item">
+                <strong>Duração:</strong> <span>{{selectedAgendamento?.tempoServico}}</span>
+              </div>
+            </div>
+          </ion-content>
+        </ion-content>             
+      </ng-template>       
+
+    </ion-modal>
 </ion-content>

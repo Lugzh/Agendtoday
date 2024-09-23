@@ -79,7 +79,6 @@ export class HorariosPage implements OnInit {
             if (indice !== -1) {
               this.timeButtons.splice(indice, 1);  // Remove o item correto
             }
-            console.log(this.timeButtons);
           },
         },
       ],

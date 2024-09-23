@@ -1,43 +1,34 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Empresa</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Empresa</ion-title>
 
-    </ion-toolbar>
-  </ion-header>
   <ion-grid>
+    <h1 (click)="presentAlertPrompt()">{{nome_empresa}} <ion-icon name="pencil-outline"></ion-icon></h1>
     <ion-row>
       <ion-col style="display: flex;justify-content: center;align-items: center; flex-direction: column;">
-
         <img id="profilepicture" *ngIf="imageUrl; else showIcon" [src]="imageUrl" (click)="openImagePicker()"/>
-         <ng-template #showIcon>
+        <ng-template #showIcon>
           <ion-icon name="add-circle-outline" style="font-size: 100px; color: #dcdcdc;" (click)="openImagePicker()"></ion-icon>
         </ng-template>
-
-          <p>Foto de Perfil</p>
+        <p>Foto de Perfil</p>
       </ion-col>
-
-
-
     </ion-row>
-    <ion-row>
+
+    <ion-row class="ion-justify-content-center">
       <ion-col>
         <ion-item>
           <ion-label>Membros</ion-label>
-          <ion-badge slot="end" color="light">6</ion-badge>
+          <ion-badge slot="end" color="light">{{membros.length}}</ion-badge>
         </ion-item>
       </ion-col>
     </ion-row>
 
     <ion-row class="ion-justify-content-center">
 
-      <ion-col size="auto" class="ion-text-center" *ngFor="let membro of membros; let i = index">
+      <ion-col size="auto" class="ion-text-center" *ngFor="let membro of membros; let i = index"  (click)="presentAlert(membro)" >
         <ion-avatar>
           <img [src]="membro.imagem" />
         </ion-avatar>
@@ -52,14 +43,14 @@
       </ion-col>
 
       <ion-modal [isOpen]="isModalOpen">
-        <ng-template >
+        <ng-template>
           <ion-header>
             <ion-toolbar>
               <ion-buttons slot="start">
                 <ion-button (click)="setOpen(false)">Cancelar</ion-button>
               </ion-buttons>
               <ion-buttons slot="end">
-                <ion-button (click)="confirmarDados()"(click)="salvaMembro()">Salvar</ion-button>
+                <ion-button (click)="confirmarDados()">Salvar</ion-button>
               </ion-buttons>
             </ion-toolbar>
           </ion-header>
@@ -85,15 +76,21 @@
     <ion-row>
       <ion-col>
         <ion-item button>
-          <ion-label>Fundo</ion-label>
-        </ion-item>
-        <ion-item button>
           <ion-label (click)="setOpen2(true)">Margens</ion-label>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label>Link:</ion-label>
+          <ion-label>
+            <a (click)="copiarTexto(link)" style="text-decoration: none; color: inherit;">
+              {{ link }}
+            </a>
+          </ion-label>
         </ion-item>
       </ion-col>
     </ion-row>
-
-
+    
+    
     <ion-modal [isOpen]="isModalOpen2">
       <ng-template>
         <ion-header>
@@ -106,32 +103,38 @@
         </ion-header>
         <ion-content>
           <ion-grid>
-            <ion-row>
-              <ion-col>
-                <ion-button class="btn-red">Vermelho</ion-button>
+            <ion-row class="ion-justify-content-center ion-align-items-center">
+              <ion-col size="6" size-md="3" class="ion-text-center">
+                <ion-button class="btn-red" (click)="selecionarCor('#ff8080')">Vermelho</ion-button>
               </ion-col>
-              <ion-col>
-                <ion-button class="btn-blue">Azul</ion-button>
+              <ion-col size="6" size-md="3" class="ion-text-center">
+                <ion-button class="btn-blue" (click)="selecionarCor('#77a6ff')">Azul</ion-button>
               </ion-col>
-              <ion-col>
-                <ion-button class="btn-green">Verde</ion-button>
+              <ion-col size="6" size-md="3" class="ion-text-center">
+                <ion-button class="btn-green" (click)="selecionarCor('#81ff81')">Verde</ion-button>
               </ion-col>
-              <ion-col>
-                <ion-button class="btn-yellow">Amarelo</ion-button>
+              <ion-col size="6" size-md="3" class="ion-text-center">
+                <ion-button class="btn-yellow" (click)="selecionarCor('#fff07d')">Amarelo</ion-button>
               </ion-col>
             </ion-row>
-            <ion-row>
-              <ion-col>
-                <ion-button class="btn-purple">Roxo</ion-button>
+            <ion-row class="ion-justify-content-center ion-align-items-center">
+              <ion-col size="6" size-md="3" class="ion-text-center">
+                <ion-button class="btn-purple" (click)="selecionarCor('#ae83ff')">Roxo</ion-button>
               </ion-col>
-              <ion-col>
-                <ion-button class="btn-orange">Laranja</ion-button>
+              <ion-col size="6" size-md="3" class="ion-text-center">
+                <ion-button class="btn-orange" (click)="selecionarCor('#ffbb84')">Laranja</ion-button>
               </ion-col>
-              <ion-col>
-                <ion-button class="btn-pink">Rosa</ion-button>
+              <ion-col size="6" size-md="3" class="ion-text-center">
+                <ion-button class="btn-pink" (click)="selecionarCor('#ff78b5')">Rosa</ion-button>
               </ion-col>
-              <ion-col>
-                <ion-button class="btn-teal">Verde-Azul</ion-button>
+              <ion-col size="6" size-md="3" class="ion-text-center">
+                <ion-button class="btn-teal" (click)="selecionarCor('#86ffd7')">Ciano</ion-button>
+              </ion-col>
+              <ion-col size="6" size-md="3" class="ion-text-center">
+                <ion-button class="btn-gray" (click)="selecionarCor('#b6b6b6')">Cinza</ion-button>
+              </ion-col>
+              <ion-col size="6" size-md="3" class="ion-text-center">
+                <ion-button class="btn-brown" (click)="selecionarCor('#ce9168')">Marrom</ion-button>
               </ion-col>
             </ion-row>
           </ion-grid>
@@ -144,7 +147,7 @@
         <ion-button expand="block" color="primary" style="margin-bottom: 50px;">Pré-visualizar</ion-button>
       </ion-col>
       <ion-col class="ion-text-center">
-        <ion-button id="last" expand="block" color="primary" style="margin-bottom: 50px;">Salvar</ion-button>
+        <ion-button  expand="block" (click)="salvar()" color="primary" style="margin-bottom: 50px;">Salvar</ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>
