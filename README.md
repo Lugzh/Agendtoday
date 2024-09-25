@@ -135,5 +135,3 @@ AgendToday is a service scheduling system designed for small businesses. It faci
 1. Clone this repository:
    ```bash
    git clone https://github.com/lugzh/agendtoday.git
-
->>>>>>> 9c1f28fdece3f807bfe51b916899529d9cdba8c5
