@@ -17,6 +17,7 @@ export class DatebaseService {
   }
   id: any;
   id1: any;
+  cnpj_usuario:any;
   async saveCadastroData(cadastroData: any) {
     try {
       //this.id = await this.firestore.collection('cadastro').add
@@ -166,7 +167,6 @@ export class DatebaseService {
     });
   }
 
-  
 
   async getImage(): Promise<any> {
     try {
@@ -205,8 +205,6 @@ export class DatebaseService {
 
 
   docSnapshot: any
-  //cnpj_usuario:any;
-  cnpj_usuario="53331182000140";//////////////////MUDA DEPOIS
   async verifyCnpjAndPassword(cnpj: string, senha: string): Promise<boolean> {
 
     try {
