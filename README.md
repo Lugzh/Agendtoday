@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-"# Agend-Today" 
-"# test2" 
-=======
+
 # AgendToday
 
 AgendToday é um sistema de agendamento de serviços projetado para pequenos negócios. Ele facilita o gerenciamento de agendas, escalabilidade dos negócios, pagamentos e comunicação com os clientes.
